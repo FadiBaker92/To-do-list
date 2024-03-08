@@ -1,26 +1,27 @@
-class Todo 
-  attr_accessor :todo
+class Workouts 
+  attr_accessor :todos
 
-  def initialize(todo)
-    @todo = todo
+  def initialize(workout, reps)
+    @workout = workout
+    @reps = reps
   end
 
 end
 
 
-class ToDoList
+class WorkoutList
   
   def initialize
-    @todo_list = []
+    @workout_list = []
   end
 
   def run
     loop do 
-      puts "Welcome to the todo list CLI"
-      puts "1 - Add to list of Todos"
-      puts "2 - View list of Todos"
+      puts "Welcome to the Workout tracker CLI"
+      puts "1 - Add Workout"
+      puts "2 - View your Workout"
       puts "3 - Exit"
-      print "Choose an option: "
+      print "Choose from options: "
       user_choice = gets.chomp.to_i
       case user_choice
       when 1
@@ -38,20 +39,24 @@ class ToDoList
   end
 
   def add_to_list
-    print "Add todo: "
-    todo = gets.chomp
-    newtodo = Todo.new(todo)
-    @todo_list.push(newtodo)
-    puts "Todo added successfully"
+    print "Add workout: "
+    workout = gets.chomp
+    print "How many reps: "
+    reps = gets.chomp
+    work = Workouts.new(workout, reps)
+    @workout_list.push(work)
+    puts "Workout added successfully"
+    puts ""
   end
 
   def view_list
-    if @todo_list == []
-      puts "Your list is empty"
+    if @workouot_list == []
+      puts "No workout"
       puts ""
     else
-      puts "Your Todos List"
-      @todo_list.each {|todo| puts todo}
+      puts "Your Workout for the day: "
+      @workout_list.each do 
+      end
 
     end
 
@@ -61,5 +66,5 @@ class ToDoList
 
 end
 
-viewtodolist = ToDoList.new
-viewtodolist.run
+viewworkoutlist = WorkoutList.new
+viewworkoutlist.run
