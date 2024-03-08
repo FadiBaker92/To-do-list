@@ -29,7 +29,7 @@ class WorkoutList
       when 2 
         view_list
       when 3
-         puts "Goodbye!"
+         puts "Make Sure You Crush Your Workout. Goodbye!"
          break
       else
         puts "Invalid option"
@@ -45,7 +45,7 @@ class WorkoutList
     reps = gets.chomp
     work = Workouts.new(workout, reps)
     @workout_list.push(work)
-    puts "Workout added successfully"
+    puts "Workout added"
     puts ""
   end
 
@@ -60,12 +60,7 @@ class WorkoutList
       end
 
     end
-
     
   end
 
-
 end
-
-viewworkoutlist = WorkoutList.new
-viewworkoutlist.run
