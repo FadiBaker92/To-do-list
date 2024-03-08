@@ -1,5 +1,5 @@
 class Workouts 
-  attr_accessor :todos
+  attr_accessor :workout , :reps
 
   def initialize(workout, reps)
     @workout = workout
@@ -18,8 +18,8 @@ class WorkoutList
   def run
     loop do 
       puts "Welcome to the Workout tracker CLI"
-      puts "1 - Add Workout"
-      puts "2 - View your Workout"
+      puts "1 - Add workout"
+      puts "2 - View your workouts"
       puts "3 - Exit"
       print "Choose from options: "
       user_choice = gets.chomp.to_i
@@ -50,12 +50,13 @@ class WorkoutList
   end
 
   def view_list
-    if @workouot_list == []
-      puts "No workout"
+    if @workout_list == []
+      puts "No workout saved"
       puts ""
     else
-      puts "Your Workout for the day: "
-      @workout_list.each do 
+      puts "Your workout for the day: "
+      @workout_list.each do |workout|
+        puts "#{workout.reps} x #{workout.workout}"
       end
 
     end
