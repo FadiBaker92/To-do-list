@@ -1,5 +1,10 @@
-# ruby-cli-template
+# WORKOUT CLI
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+The app helps you keep track of your gym workouts. 
+By pressing '1' you add your desired workout and then the amount of reps.
+By pressing '2' you can view all the workouts you've added in one place.
+By pressing '3' you can exit the app.
 
-- Ruby version: `3.2.1`
+
+# RUN
+run ```  ruby app.rb ``` in terminal
