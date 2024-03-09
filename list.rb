@@ -17,6 +17,7 @@ class WorkoutList
 
   def run
     loop do 
+      puts ""
       puts "Welcome to the Workout tracker CLI"
       puts "1 - Add workout"
       puts "2 - View your workouts"
@@ -46,7 +47,6 @@ class WorkoutList
     work = Workouts.new(workout, reps)
     @workout_list.push(work)
     puts "Workout added"
-    puts ""
   end
 
   def view_list
