@@ -30,7 +30,8 @@ class WorkoutList
       when 2 
         view_list
       when 3
-         puts "Make Sure You Crush Your Workout. Goodbye!"
+         puts "Good Luck With Your Workout. Goodbye!"
+         puts ""
          break
       else
         puts "Invalid option"
