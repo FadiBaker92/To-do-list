@@ -7,4 +7,4 @@ By pressing '3' you can exit the app.
 
 
 # RUN
-run ```  ruby app.rb ``` in terminal
+to run =>  type ```  ruby app.rb ``` in terminal
